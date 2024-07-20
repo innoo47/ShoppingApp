@@ -6,15 +6,140 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    android:weightSum="10"
     tools:context=".MainActivity"
     app:menu="@menu/menu_bottom_nav"
     >
 
+    <!-- Main View -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:paddingTop="40dp"
+        android:orientation="vertical"
+        >
+
+        <!-- Title Logo View -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="@string/shop"
+                android:textSize="40sp"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/line_seed_kr_bd"
+                />
+        </LinearLayout>
+
+        <!-- Category View -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scrollbars="none"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <Button
+                    android:id="@+id/btnCatTop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Top"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/line_seed_kr_bd"
+                    android:layout_marginEnd="10dp"
+                    />
+
+                <Button
+                    android:id="@+id/btnCatBottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Bottom"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/line_seed_kr_bd"
+                    android:layout_marginEnd="10dp"
+                    />
+
+                <Button
+                    android:id="@+id/btnCatOuter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Outer"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/line_seed_kr_bd"
+                    android:layout_marginEnd="10dp"
+                    />
+
+                <Button
+                    android:id="@+id/btnCat1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Outer"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/line_seed_kr_bd"
+                    android:layout_marginEnd="10dp"
+                    />
+
+                <Button
+                    android:id="@+id/btnCatTop2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Outer"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/line_seed_kr_bd"
+                    android:layout_marginEnd="10dp"
+                    />
+
+                <Button
+                    android:id="@+id/btnCatTop3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Outer"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/line_seed_kr_bd"
+                    android:layout_marginEnd="10dp"
+                    />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Goods Grid View -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:background="#Fc0"
+            >
+
+            <!-- GridView -->
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
     <!-- BottomNavigationBar -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:layout_height="80dp"
+        android:layout_weight="0"
+        app:itemIconSize="30dp"
+        app:itemTextColor="@color/text_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

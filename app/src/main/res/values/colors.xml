@@ -9,8 +9,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- Custom Color Assets -->
-    <color name="color1">#3B86CB</color>
-    <color name="color2">#E6E6E6</color>
-    <color name="color3">#737373</color>
-    <color name="color4">#F9F9F9</color>
+    <color name="default_color">#3B86CB</color>
+    <color name="insert_area_color">#E6E6E6</color>
+    <color name="text_color">#737373</color>
+    <color name="background_color">#F9F9F9</color>
 </resources>

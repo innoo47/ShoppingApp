@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ShoppingApp</string>
     <string name="Top">상의</string>
     <string name="Bottom">하의</string>
     <string name="Outer">아우터</string>

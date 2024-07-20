@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="50dp"
+    tools:context=".LoginActivity"
+    >
+
+    <!-- Logo View -->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:paddingBottom="20dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/main_logo"
+            android:scaleType="fitCenter"
+            />
+
+    </LinearLayout>
+
+    <!-- Insert View -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <!-- Insert Area -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="26dp"
+            >
+
+            <!-- ID -->
+            <EditText
+                android:id="@+id/id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_border"
+                android:hint="@string/id"
+                android:textSize="26sp"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_marginBottom="20dp"
+                tools:ignore="RtlSymmetry"
+                />
+
+            <!-- Password -->
+            <EditText
+                android:id="@+id/pw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_border"
+                android:hint="@string/password"
+                android:textSize="26sp"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                tools:ignore="RtlSymmetry"
+                />
+        </LinearLayout>
+
+        <!-- Login Button Area -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            >
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:textSize="20sp"
+                android:fontFamily="@font/line_seed_kr_rg"
+                android:padding="10dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="------------------------------------------------------"
+            android:paddingBottom="20dp"
+            />
+
+    </LinearLayout>
+
+    <!-- Register Button View -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="150dp"
+        >
+        <!-- 추가 예정 -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_text"
+            android:textSize="15sp"
+            android:fontFamily="@font/line_seed_kr_rg"
+            android:layout_marginEnd="20dp"
+            android:textColor="#000"
+            />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textSize="15sp"
+            android:fontFamily="@font/line_seed_kr_rg"
+            />
+    </LinearLayout>
+
+</LinearLayout>
