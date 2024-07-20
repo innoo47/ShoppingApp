@@ -27,6 +27,11 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    // BottomNavigation을 사용하기 위한 ViewBinding 설정
+    buildFeatures {
+        viewBinding true
+    }
+
 }
 
 dependencies {
