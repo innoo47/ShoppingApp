@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
-        <shape android:shape="rectangle">
-            <stroke android:width = "1dp" android:color = "@color/default_color"/>
+        <shape
+            android:shape="rectangle">
+            <stroke
+                android:width = "1.3dp"
+                android:color = "@color/default_color" />
             <corners
-                android:radius="5dp"/>
+                android:radius="8dp" />
         </shape>
     </item>
 
@@ -13,10 +16,12 @@
         android:left="2dp"
         android:right="2dp"
         android:top="2dp">
-        <shape android:shape="rectangle">
-            <solid android:color="@color/insert_area_color"/>
+        <shape
+            android:shape="rectangle">
+            <solid
+                android:color="@color/insert_area_color" />
             <corners
-                android:radius="5dp"/>
+                android:radius="8dp" />
         </shape>
     </item>
 </layer-list>
