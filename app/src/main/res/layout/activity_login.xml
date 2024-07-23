@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:paddingBottom="20dp"
+        android:paddingBottom="23dp"
         >
 
         <!-- Insert Area -->
@@ -52,7 +52,7 @@
                 android:id="@+id/id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/edit_border"
+                android:background="@drawable/custom_edittext"
                 android:hint="@string/id"
                 android:textSize="26sp"
                 android:textColorHint="@color/text_color"
@@ -68,7 +68,7 @@
                 android:id="@+id/pw"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/edit_border"
+                android:background="@drawable/custom_edittext"
                 android:hint="@string/password"
                 android:textSize="26sp"
                 android:textColorHint="@color/text_color"
@@ -85,7 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="33dp"
             >
 
             <Button
@@ -106,7 +106,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_centerInParent="true"
-            android:background="@color/text_color"
+            android:background="@color/default_color"
             />
 
     </LinearLayout>

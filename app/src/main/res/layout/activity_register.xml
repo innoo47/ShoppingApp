@@ -1,10 +1,265 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    android:paddingTop="40dp"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            />
+
+    </LinearLayout>
+
+    <!-- Register View -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <!-- Title Logo View -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="@string/register"
+                android:textSize="40sp"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/line_seed_kr_bd"
+                />
+        </LinearLayout>
+
+        <!-- Insert View - ID -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:paddingBottom="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/id_ko"
+                android:textSize="25sp"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/line_seed_kr_rg"
+                android:paddingBottom="10dp"
+                />
+
+            <EditText
+                android:id="@+id/insertId"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:background="@drawable/custom_edittext"
+                android:paddingStart="10sp"
+                tools:ignore="RtlSymmetry"
+                />
+        </LinearLayout>
+
+
+        <!-- Insert View - PW -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:paddingBottom="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pw_ko"
+                android:textSize="25sp"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/line_seed_kr_rg"
+                android:paddingBottom="10dp"
+                />
+
+            <EditText
+                android:id="@+id/insertPw"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:background="@drawable/custom_edittext"
+                android:paddingStart="10sp"
+                tools:ignore="RtlSymmetry"
+                />
+        </LinearLayout>
+
+        <!-- Insert View - Username -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:paddingBottom="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username_ko"
+                android:textSize="25sp"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/line_seed_kr_rg"
+                android:paddingBottom="10dp"
+                />
+
+            <EditText
+                android:id="@+id/insertUsername"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:background="@drawable/custom_edittext"
+                android:paddingStart="10sp"
+                tools:ignore="RtlSymmetry"
+                />
+        </LinearLayout>
+
+        <!-- Insert View - email -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:paddingBottom="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_ko"
+                android:textSize="25sp"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/line_seed_kr_rg"
+                android:paddingBottom="10dp"
+                />
+
+            <EditText
+                android:id="@+id/insertEmail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:background="@drawable/custom_edittext"
+                android:paddingStart="10sp"
+                tools:ignore="RtlSymmetry"
+                />
+        </LinearLayout>
+
+        <!-- Insert View - Gender -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:paddingBottom="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gender_ko"
+                android:textSize="25sp"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/line_seed_kr_rg"
+                android:paddingBottom="10dp"
+                />
+
+            <Spinner
+                android:id="@+id/gender_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingStart="10sp"
+                android:background="@drawable/custom_edittext"
+                />
+        </LinearLayout>
+
+
+        <!-- Insert View - Birthday -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:paddingBottom="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/birthday_ko"
+                android:textSize="25sp"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/line_seed_kr_rg"
+                android:paddingBottom="10dp"
+                />
+
+            <EditText
+                android:id="@+id/insertBirth"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="20sp"
+                android:background="@drawable/custom_edittext"
+                android:paddingStart="10sp"
+                tools:ignore="RtlSymmetry"
+                />
+        </LinearLayout>
+
+        <!-- Register Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="40dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <Button
+                android:id="@+id/register"
+                android:layout_width="430dp"
+                android:layout_height="50dp"
+                android:text="@string/register"
+                android:textSize="20sp"
+                android:fontFamily="@font/line_seed_kr_rg"
+                android:background="@drawable/button_style_cat"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

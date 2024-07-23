@@ -3,11 +3,8 @@ package com.inu.shoppingapp;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class SharedPreferencesManager {
-    private static final String PREFERENCES_NAME = "my_preferences";
+    private static final String PREFERENCES_NAME = "UserInfo";
 
     public static SharedPreferences getPreferences(Context mContext){
         return mContext.getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE);
@@ -20,25 +17,17 @@ public class SharedPreferencesManager {
         editor.apply();
     }
 
-    public static void setLoginInfo(Context context, String email, String password){
+    public static void setLoginInfo(Context context, String id){
         SharedPreferences prefs = getPreferences(context);
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putString("email", email);
-        editor.putString("password", password);
-
+        editor.putString("id", id);
         editor.apply();
     }
 
-    public static Map<String, String> getLoginInfo(Context context){
+    public static String getLoginInfo(Context context){
         SharedPreferences prefs = getPreferences(context);
-        Map<String, String> LoginInfo = new HashMap<>();
-        String email = prefs.getString("email", "");
-        String password = prefs.getString("password", "");
-
-        LoginInfo.put("email", email);
-        LoginInfo.put("password", password);
-
-        return LoginInfo;
+        String id = prefs.getString("id", "");
+        return id;
     }
 
 }

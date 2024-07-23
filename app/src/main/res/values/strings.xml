@@ -14,4 +14,11 @@
     <string name="id">ID</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="id_ko">아이디</string>
+    <string name="pw_ko">비밀번호</string>
+    <string name="username_ko">닉네임</string>
+    <string name="email_ko">이메일</string>
+    <string name="gender_ko">성별</string>
+    <string name="birthday_ko">생년월일</string>
+    <string name="delete_user">회원탈퇴</string>
 </resources>

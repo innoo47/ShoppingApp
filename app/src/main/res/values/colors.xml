@@ -13,4 +13,5 @@
     <color name="insert_area_color">#E6E6E6</color>
     <color name="text_color">#737373</color>
     <color name="background_color">#F9F9F9</color>
+    <color name="colorEditTextBg">#e6e6e6</color>
 </resources>
