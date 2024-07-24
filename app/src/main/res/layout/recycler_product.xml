@@ -7,7 +7,8 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     app:cardCornerRadius="20dp"
-    app:cardElevation="10dp"
+    app:cardElevation="3dp"
+    android:layout_margin="22dp"
     >
 
     <LinearLayout
@@ -15,6 +16,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingBottom="10dp"
+        android:background="@color/background_color"
         >
 
         <FrameLayout
@@ -25,8 +27,8 @@
             <!-- Product Image -->
             <ImageView
                 android:id="@+id/productImage"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
                 android:src="@drawable/top"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -39,8 +41,8 @@
                 android:id="@+id/btnAdd"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginLeft="125dp"
+                android:layout_marginTop="125dp"
                 android:src="@drawable/btn_add"
                 />
 
@@ -62,7 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="옷이름들어갑니다아"
-                android:textSize="13sp"
+                android:textSize="15sp"
                 android:fontFamily="@font/line_seed_kr_bd"
                 android:maxLines="1"
                 android:ellipsize="end"
@@ -71,17 +73,17 @@
 
             <!-- Price -->
             <LinearLayout
-                android:id="@+id/productPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="2dp"
                 >
 
                 <TextView
+                    android:id="@+id/productPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
-                    android:textSize="13sp"
+                    android:textSize="15sp"
                     android:fontFamily="@font/line_seed_kr_bd"
                     android:maxLines="1"
                     android:ellipsize="end"
@@ -91,7 +93,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="원"
-                    android:textSize="13sp"
+                    android:textSize="15sp"
                     android:fontFamily="@font/line_seed_kr_bd"
                     android:maxLines="1"
                     android:ellipsize="end"

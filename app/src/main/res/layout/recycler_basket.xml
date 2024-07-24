@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="3dp"
+    android:layout_margin="15dp"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <!-- Image -->
+        <ImageView
+            android:id="@+id/basketItemImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_basket"
+            android:scaleType="centerCrop"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#BDBDBD"
+            />
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/background_color"
+            >
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="#title"
+                android:textSize="20sp"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/line_seed_kr_bd"
+                android:gravity="center|left"
+                android:layout_marginLeft="5dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                >
+
+                <!-- Price -->
+                <TextView
+                    android:id="@+id/basketItemPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/line_seed_kr_rg"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="원"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/line_seed_kr_rg"
+
+                    />
+
+                <!-- Space -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+
+                <!-- Count -->
+                <TextView
+                    android:id="@+id/basketItemCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/line_seed_kr_rg"
+                    android:layout_marginEnd="5dp"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#BDBDBD"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:weightSum="2"
+                >
+
+                <!-- Count minus -->
+                <ImageView
+                    android:id="@+id/basketItemCountMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/minus"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="#BDBDBD"
+                    />
+
+                <!-- Count Plus -->
+                <ImageView
+                    android:id="@+id/basketItemCountPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/plus"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

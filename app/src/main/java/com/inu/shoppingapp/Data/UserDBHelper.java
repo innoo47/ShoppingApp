@@ -7,6 +7,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+
 public class UserDBHelper extends SQLiteOpenHelper {
 
     private static UserDBHelper dbHelper = null;
@@ -77,52 +79,54 @@ public class UserDBHelper extends SQLiteOpenHelper {
         return db.insert(TABLE_NAME, null, value);
     }
 
-//    public ArrayList<UserBean> getAllUser(){
-//        SQLiteDatabase db = getReadableDatabase();
-//        Cursor cursor = db.query(TABLE_NAME, null, null, null, null, null, null);
-//        ArrayList<UserBean> result = new ArrayList<>();
-//
-//        while(cursor.moveToNext()){
-//            UserBean user = new UserBean();
-//            user.setSerialNumber(cursor.getInt(cursor.getColumnIndex(COL_0)));
-//            user.setName(cursor.getString(cursor.getColumnIndex(COL_1)));
-//            user.setEmail(cursor.getString(cursor.getColumnIndex(COL_2)));
-//            user.setId(cursor.getString(cursor.getColumnIndex(COL_3)));
-//            user.setPassword(cursor.getString(cursor.getColumnIndex(COL_4)));
-//            user.setGender(cursor.getString(cursor.getColumnIndex(COL_5)));
-//            user.setYears(cursor.getString(cursor.getColumnIndex(COL_6)));
-//            result.add(user);
-//        }
-//
-//        return result;
-//    }
-//
-//    public ArrayList<UserBean> getUserById(String id){
-//        SQLiteDatabase db = getReadableDatabase();
-//        Cursor cursor = db.query(TABLE_NAME, null, COL_3 + "=?", new String[] {id}, null, null, null);
-//        ArrayList<UserBean> result = new ArrayList<>();
-//
-//        while(cursor.moveToNext()){
-//            UserBean user = new UserBean();
-//
-//            user.setSerialNumber(cursor.getInt(cursor.getColumnIndex(COL_0)));
-//            user.setName(cursor.getString(cursor.getColumnIndex(COL_1)));
-//            user.setEmail(cursor.getString(cursor.getColumnIndex(COL_2)));
-//            user.setId(cursor.getString(cursor.getColumnIndex(COL_3)));
-//            user.setPassword(cursor.getString(cursor.getColumnIndex(COL_4)));
-//            user.setGender(cursor.getString(cursor.getColumnIndex(COL_5)));
-//            user.setYears(cursor.getString(cursor.getColumnIndex(COL_6)));
-//
-//            result.add(user);
-//        }
-//
-//        return result;
-//    }
+    @SuppressLint("Range")
+    public ArrayList<UserBean> getAllUser(){
+        SQLiteDatabase db = getReadableDatabase();
+        @SuppressLint("Recycle") Cursor cursor = db.query(TABLE_NAME, null, null, null, null, null, null);
+        ArrayList<UserBean> result = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            UserBean user = new UserBean();
+            user.setSerialNumber(cursor.getInt(cursor.getColumnIndex(COL_0)));
+            user.setName(cursor.getString(cursor.getColumnIndex(COL_1)));
+            user.setEmail(cursor.getString(cursor.getColumnIndex(COL_2)));
+            user.setId(cursor.getString(cursor.getColumnIndex(COL_3)));
+            user.setPassword(cursor.getString(cursor.getColumnIndex(COL_4)));
+            user.setGender(cursor.getString(cursor.getColumnIndex(COL_5)));
+            user.setYears(cursor.getString(cursor.getColumnIndex(COL_6)));
+            result.add(user);
+        }
+
+        return result;
+    }
+
+    @SuppressLint("Range")
+    public ArrayList<UserBean> getUserById(String id){
+        SQLiteDatabase db = getReadableDatabase();
+        @SuppressLint("Recycle") Cursor cursor = db.query(TABLE_NAME, null, COL_3 + "=?", new String[] {id}, null, null, null);
+        ArrayList<UserBean> result = new ArrayList<>();
+
+        while(cursor.moveToNext()){
+            UserBean user = new UserBean();
+
+            user.setSerialNumber(cursor.getInt(cursor.getColumnIndex(COL_0)));
+            user.setName(cursor.getString(cursor.getColumnIndex(COL_1)));
+            user.setEmail(cursor.getString(cursor.getColumnIndex(COL_2)));
+            user.setId(cursor.getString(cursor.getColumnIndex(COL_3)));
+            user.setPassword(cursor.getString(cursor.getColumnIndex(COL_4)));
+            user.setGender(cursor.getString(cursor.getColumnIndex(COL_5)));
+            user.setYears(cursor.getString(cursor.getColumnIndex(COL_6)));
+
+            result.add(user);
+        }
+
+        return result;
+    }
 
     @SuppressLint("Range")
     public String getUserId(String id){
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.query(TABLE_NAME, null, COL_3 + "=?", new String[] {id}, null, null, null);
+        @SuppressLint("Recycle") Cursor cursor = db.query(TABLE_NAME, null, COL_3 + "=?", new String[] {id}, null, null, null);
         String result = "";
 
         while(cursor.moveToNext()){
@@ -135,7 +139,7 @@ public class UserDBHelper extends SQLiteOpenHelper {
     @SuppressLint("Range")
     public String getUserPw(String id){
         SQLiteDatabase db = getReadableDatabase();
-        Cursor cursor = db.query(TABLE_NAME, null, COL_3 + "=?", new String[] {id}, null, null, null);
+        @SuppressLint("Recycle") Cursor cursor = db.query(TABLE_NAME, null, COL_3 + "=?", new String[] {id}, null, null, null);
         String result = "";
 
         while(cursor.moveToNext()){

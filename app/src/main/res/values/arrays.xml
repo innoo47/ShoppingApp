@@ -6,4 +6,9 @@
         <item>여자</item>
     </string-array>
 
+    <string-array name="type">
+        <item>Top</item>
+        <item>Bottom</item>
+        <item>Acc</item>
+    </string-array>
 </resources>

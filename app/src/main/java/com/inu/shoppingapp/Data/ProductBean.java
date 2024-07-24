@@ -8,6 +8,12 @@ public class ProductBean {
     private byte[] image;
     private String type;
 
+//    public ProductBean(String name, int price, int image) {
+//        this.name = name;
+//        this.price = price;
+//        this.image = image;
+//    }
+
     public int getSerialNumber() {
         return serialNumber;
     }
