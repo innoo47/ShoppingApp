@@ -15,9 +15,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainMenuActivity extends AppCompatActivity {
 
     private FragmentManager fragmentManager = getSupportFragmentManager();
-    private MainFragment mainFragment = new MainFragment();
-    private BasketFragment basketFragment = new BasketFragment();
-    private MyPageFragment myPageFragment = new MyPageFragment();
+    private com.inu.shoppingapp.MainFragment mainFragment = new com.inu.shoppingapp.MainFragment();
+    private com.inu.shoppingapp.BasketFragment basketFragment = new com.inu.shoppingapp.BasketFragment();
+    private com.inu.shoppingapp.MyPageFragment myPageFragment = new com.inu.shoppingapp.MyPageFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

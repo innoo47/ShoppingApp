@@ -148,6 +148,27 @@ public class ProductDBHelper extends SQLiteOpenHelper {
         return result;
     }
 
+    @SuppressLint("Range")
+    public ArrayList<ProductBean> getBasketProduct(String id){
+        SQLiteDatabase db = getReadableDatabase();
+        @SuppressLint("Recycle") Cursor cursor = db.query(TABLE_NAME, null, COL_1 + "=?", new String[] {id}, null, null, null);
+        ArrayList<ProductBean> result = new ArrayList<>();
+
+        while (cursor.moveToNext()) {
+            ProductBean product = new ProductBean();
+
+            product.setName(cursor.getString(cursor.getColumnIndex(COL_2)));
+            product.setPrice(cursor.getInt(cursor.getColumnIndex(COL_3)));
+            product.setImage(cursor.getBlob(cursor.getColumnIndex(COL_4)));
+
+            result.add(product);
+        }
+
+        return result;
+    }
+
+
+
     public long deleteAllProduct(){
         SQLiteDatabase db = getWritableDatabase();
         return db.delete(TABLE_NAME, null, null);

@@ -33,21 +33,6 @@ public class MyPageFragment extends Fragment {
     private TextView gender;
     private TextView birthday;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public MyPageFragment() {
-        // Required empty public constructor
-    }
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -81,6 +66,7 @@ public class MyPageFragment extends Fragment {
             public void onClick(View view) {
                 Log.i(TAG, "BTN Click");
                 com.inu.shoppingapp.SharedPreferencesManager.clearPreferences(getActivity());   // Preference 삭제
+                com.inu.shoppingapp.SharedPreferencesManager.clearBasketPreferences(getActivity());
                 Intent intent = new Intent(getActivity(), com.inu.shoppingapp.LoginActivity.class); // Fragment라서 getActivity()를 사용
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // 로그인 화면으로 이동
                 startActivity(intent);
@@ -97,6 +83,7 @@ public class MyPageFragment extends Fragment {
                 dbHelper.deleteUser(userbean);
 
                 com.inu.shoppingapp.SharedPreferencesManager.clearPreferences(getActivity());   // Preference 삭제
+                com.inu.shoppingapp.SharedPreferencesManager.clearBasketPreferences(getActivity());
                 Intent intent = new Intent(getActivity(), com.inu.shoppingapp.LoginActivity.class); // Fragment라서 getActivity()를 사용
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // 로그인 화면으로 이동
                 startActivity(intent);

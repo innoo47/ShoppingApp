@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,10 @@ import java.util.ArrayList;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.Holder> {
 
     private ArrayList<ProductBean> listData = new ArrayList<>();
+    private BasketRecyclerViewAdapter basketAdapter;
+    private ItemClickListener listener;
+
+    private ImageView btnAdd;
 
     public RecyclerViewAdapter(ArrayList<ProductBean> listData) {
         this.listData = listData;
@@ -51,8 +56,17 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.image.setImageDrawable(getImage(item.getImage()));
         holder.title.setText(item.getName());
         holder.price.setText(String.valueOf(item.getPrice()));
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("클릭", "클릭클릭" + item.getId());
+
+            }
+        });
     }
 
+    // 이미지 비트맵
     public Drawable getImage(byte[] bytes){
         Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
         Drawable drawable = new BitmapDrawable(null, bitmap);
@@ -63,7 +77,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         ImageView image;
         TextView title;
         TextView price;
-        ImageView btnAdd;
 
         public Holder(@NonNull View itemView) {
             super(itemView);
@@ -72,15 +85,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             title = (TextView) itemView.findViewById(R.id.productName);
             price = (TextView) itemView.findViewById(R.id.productPrice);
             btnAdd = (ImageView) itemView.findViewById(R.id.btnAdd);
-            btnAdd.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    // 장바구니 리스트에 추가 (Preference 사용)
-                    // 해당 상품의 ID를 Preference에 저장하여 ID를 통해 장바구니 뷰에서 해당 상품의 데이터를 가져옴
-
-
-                }
-            });
 
         }
     }

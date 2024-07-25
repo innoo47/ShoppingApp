@@ -23,7 +23,7 @@
             android:id="@+id/basketItemImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/ic_basket"
+            android:src="@drawable/bottom1"
             android:scaleType="centerCrop"
             />
 
@@ -44,7 +44,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="#title"
+                android:text="Deep One Tuck Sweat Shorts [Grey]"
                 android:textSize="20sp"
                 android:textColor="@color/text_color"
                 android:fontFamily="@font/line_seed_kr_bd"
@@ -66,7 +66,7 @@
                     android:id="@+id/basketItemPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="0"
+                    android:text="28800"
                     android:textSize="18sp"
                     android:fontFamily="@font/line_seed_kr_rg"
                     />
